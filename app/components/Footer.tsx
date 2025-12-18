@@ -4,7 +4,6 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="w-full bg-slate-50 border-t border-gray-200">
-      {/* Newsletter Section */}
       <div className="w-full flex justify-center mt-8 px-4">
         <div className="flex flex-col md:flex-row items-center justify-between bg-[#476f90] text-white rounded-2xl shadow-lg px-6 py-5 w-full max-w-4xl gap-6 md:gap-8">
           
@@ -29,10 +28,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Main footer content */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 py-16 px-6 lg:px-8 text-gray-600">
-        
-        {/* Logo & Social - Takes 4 columns on Desktop */}
+      <div className="max-w-7xl mx-auto flex flex-wrap justify-evenly items-start py-10 text-gray-600">
+
         <div className="flex flex-col gap-6 lg:col-span-4 items-center order-last ">
           <div className="flex flex-row gap-4 items-center justify-end bg-white p-2 rounded-lg shadow-sm border border-gray-100">
             <Image src="/logo2.jpg" alt="logo2" width={90} height={40} className="object-contain" />
@@ -61,10 +58,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Links Sections - Takes remaining space */}
-        <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-right">
+        <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-20 text-right">
           
-          {/* راه های ارتباطی */}
           <div className="flex flex-col items-center">
             <h2 className="font-bold text-gray-800 mb-5 flex items-center gap-2 text-lg">
               راه های ارتباطی <span className="text-[#f25c54]">.</span>
@@ -85,7 +80,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* خدمات مشتریان */}
           <div className="flex flex-col items-center">
             <h3 className="font-bold text-gray-800 mb-5 flex items-center gap-2 text-lg">
               خدمات مشتریان <span className="text-[#f25c54]">.</span>
@@ -102,7 +96,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* دسترسی سریع */}
           <div className="flex flex-col items-center">
             <h3 className="font-bold text-gray-800 mb-5 flex items-center gap-2 text-lg">
               دسترسی سریع <span className="text-[#f25c54]">.</span>
@@ -122,7 +115,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Copyright */}
       <div className="w-full bg-[#3d5a73] text-blue-100 text-xs py-4 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row-reverse justify-between items-center px-6 gap-2">
           <p className="text-right">
