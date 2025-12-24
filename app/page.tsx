@@ -1,7 +1,8 @@
-import BestSellerProducts from "./components/BestSellerProducts";
-import Footer from "./components/Footer";
-import Header from "./components/Header/Header";
-import Whyus from "./components/WhyUs";
+import BestSellerProducts from "./components/Home/BestSellerProducts";
+import Footer from "./components/Home/Footer";
+import Header from "./components/Home/Header/Header";
+import TestimonialsSlider from "./components/Home/TestimonialsSlider";
+import Whyus from "./components/Home/WhyUs";
 
 export default function Home() {
   return (
@@ -10,7 +11,8 @@ export default function Home() {
         <Header />
         <Whyus />
         <BestSellerProducts />
-        <Footer/>
+        <TestimonialsSlider />
+        <Footer />
       </main>
     </>
   );
