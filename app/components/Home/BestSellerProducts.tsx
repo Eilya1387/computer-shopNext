@@ -44,8 +44,8 @@ const BestSellerProducts: React.FC = () => (
         <div key={p.id} className="bg-white rounded-lg shadow p-4 text-center">
           <img src={p.image} alt={p.title} className="mx-auto mb-4" />
           <p className="text-lg font-medium text-gray-800">{p.title}</p>
-          <p className="text-blue-600 font-bold mt-2">{p.price}</p>
-          <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          <p className="text-[#476f90] font-bold mt-2">{p.price}</p>
+          <button className="mt-4 bg-[#476f90] text-white px-4 py-2 rounded hover:bg-blue-700">
             اضافه کردن به سبد خرید
           </button>
         </div>

@@ -6,7 +6,6 @@ import { Navigation, Pagination, EffectCoverflow, Autoplay } from "swiper/module
 import type { Swiper as SwiperType } from "swiper";
 import Image from "next/image";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -88,7 +87,6 @@ const TestimonialsSlider: React.FC = () => {
               className="!w-[90%] sm:!w-[85%] md:!w-[80%] lg:!w-[75%]"
             >
               <div className="slider bg-[#4C637C] w-full mx-auto flex flex-col gap-4 sm:gap-6 relative text-white rounded-2xl h-auto min-h-[250px] sm:min-h-[280px] md:min-h-[250px] px-4 sm:px-6 py-4 sm:py-5 shadow-lg">
-                {/* Top Section */}
                 <div className="slider-top__con flex gap-4 sm:gap-7 items-center">
                   <div className="slider-top__pic w-14 h-14 sm:w-16 sm:h-16 rounded-full border-4 border-white/30 overflow-hidden flex-shrink-0">
                     <Image
@@ -121,7 +119,6 @@ const TestimonialsSlider: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Bottom Section */}
                 <div className="slider-bottom__con w-full flex-1 pr-4 sm:pr-8 pl-2 sm:pl-3 pb-12 sm:pb-14">
                   <p className="slider-bottom__content font-vazir text-sm sm:text-base leading-6 sm:leading-7 text-white/95">
                     {testimonial.comment}
@@ -132,7 +129,7 @@ const TestimonialsSlider: React.FC = () => {
           ))}
         </Swiper>
 
-        {/* Custom Navigation Buttons */}
+
         <div className="slider-btn__con absolute -bottom-5 sm:-bottom-6 left-1/2 transform -translate-x-1/2 flex items-center justify-center gap-6 sm:gap-8 z-10">
           <button
             onClick={() => swiperRef.current?.slidePrev()}
