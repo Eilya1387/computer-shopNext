@@ -6,12 +6,12 @@ import HeaderMenu from "./HeaderMenu";
 import Sidebar from "./Sidebar";
 
 const Header: React.FC = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
 
   return (
     <>
       <header className="header w-full min-h-[663px]">
-        <HeaderMenu onOpenSidebar={() => setIsSidebarOpen(true)} />
+
 
         <div className="header-main-wrapper flex w-full gap-5">
           <section className="header-banner relative overflow-clip h-[588px] rounded-b-3xl md:rounded-t-3xl bg-[#506e8f] flex flex-col justify-center items-center gap-3 w-full min-w-[375px] md:flex-row-reverse">
@@ -78,7 +78,7 @@ const Header: React.FC = () => {
         </div>
       </header>
 
-      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+
     </>
   );
 };

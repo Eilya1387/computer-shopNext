@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface HeaderMenuProps {
   onOpenSidebar: () => void;
@@ -198,7 +199,9 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ onOpenSidebar }) => {
             تخفیف دار ها
           </div>
           <div className="navbar__item cursor-pointer hover:text-blue-600 transition">
-            درباره ما
+            <Link href="/contact">
+            ارتباط با ما
+            </Link>
           </div>
         </nav>
 
