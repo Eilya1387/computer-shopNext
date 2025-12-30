@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @font-face {
   font-family: 'vazir';
-  src: url('/public/font/vazirmatn-medium.woff2') format('ttf');
+  src: url('/font/vazirmatn-medium.woff2') format('ttf');
 }
 body{
   font-family: 'vazir'!important;

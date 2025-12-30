@@ -1,9 +1,5 @@
 "use client";
-
-import { useState } from "react";
 import Image from "next/image";
-import HeaderMenu from "./HeaderMenu";
-import Sidebar from "./Sidebar";
 
 const Header: React.FC = () => {
 

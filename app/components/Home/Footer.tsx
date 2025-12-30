@@ -59,7 +59,21 @@ export default function Footer() {
         </div>
 
         <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-20 text-right">
-          
+          <div className="flex flex-col items-center">
+            <h3 className="font-bold text-gray-800 mb-5 flex items-center gap-2 text-lg">
+              دسترسی سریع <span className="text-[#f25c54]">.</span>
+            </h3>
+            <ul className="space-y-3 text-sm flex flex-col items-center">
+              {['صفحه اصلی', 'فروشگاه', 'وبلاگ', 'تماس با ما'].map((item, idx) => (
+                <li key={idx}>
+                  <Link href="#" className="relative group inline-block py-1">
+                    <span className="relative z-10 transition-colors group-hover:text-[#476f90]">{item}</span>
+                    <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-[#f25c54] transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
           <div className="flex flex-col items-center">
             <h2 className="font-bold text-gray-800 mb-5 flex items-center gap-2 text-lg">
               راه های ارتباطی <span className="text-[#f25c54]">.</span>
@@ -96,21 +110,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex flex-col items-center">
-            <h3 className="font-bold text-gray-800 mb-5 flex items-center gap-2 text-lg">
-              دسترسی سریع <span className="text-[#f25c54]">.</span>
-            </h3>
-            <ul className="space-y-3 text-sm flex flex-col items-center">
-              {['صفحه اصلی', 'فروشگاه', 'وبلاگ', 'تماس با ما'].map((item, idx) => (
-                <li key={idx}>
-                  <Link href="#" className="relative group inline-block py-1">
-                    <span className="relative z-10 transition-colors group-hover:text-[#476f90]">{item}</span>
-                    <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-[#f25c54] transition-all duration-300 group-hover:w-full"></span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          
 
         </div>
       </div>

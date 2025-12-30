@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,9 +10,20 @@ interface HeaderMenuProps {
 
 const HeaderMenu: React.FC<HeaderMenuProps> = ({ onOpenSidebar }) => {
   const [isNavDropdownOpen, setIsNavDropdownOpen] = useState(false);
-
+const [scrolled, setscrolled] = useState(false);
+useEffect(() => {
+  const handlescroll = (): void => {
+    setscrolled(window.scrollY > 1);
+  };
+  window.addEventListener("scroll", handlescroll);
+}, []);
   return (
-    <menu className="header-menu w-full h-[42px] md:h-[75px]">
+    <menu
+      className={`header-menu w-full h-[42px] md:h-[75px] bg-white z-50 ${
+        scrolled ? "fixed" : ""
+      }  `}
+      dir="rtl"
+    >
       {/* Mobile Menu */}
       <div className="header-menu--mobile flex flex-row-reverse justify-between items-center md:hidden">
         <div className="header-menu__wrap__left w-[78px] h-10 flex items-center gap-2.5">
@@ -149,9 +160,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ onOpenSidebar }) => {
         </div>
 
         <nav className="header-menu__navbar--lg flex justify-evenly items-center gap-5">
-          <div className="navbar__item cursor-pointer hover:text-blue-600 transition">
-            صفحه اصلی
-          </div>
+          <Link href="/">صفحه اصلی</Link>
 
           <div className="navbar__item--dropdown relative">
             <button
@@ -199,9 +208,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ onOpenSidebar }) => {
             تخفیف دار ها
           </div>
           <div className="navbar__item cursor-pointer hover:text-blue-600 transition">
-            <Link href="/contact">
-            ارتباط با ما
-            </Link>
+            <Link href="/contact">ارتباط با ما</Link>
           </div>
         </nav>
 
@@ -222,9 +229,11 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ onOpenSidebar }) => {
               height={24}
             />
           </button>
-          <button className="header-menu__wrap__left--3 w-full h-full flex justify-center items-center">
+          <Link href="/auth/login" className="cursor-pointer header-menu__wrap__left--3 w-full h-full flex justify-center items-center">
+          <button>
             <Image src="/Header/User.webp" alt="user" width={24} height={24} />
           </button>
+          </Link>
         </div>
       </div>
     </menu>
@@ -232,4 +241,3 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ onOpenSidebar }) => {
 };
 
 export default HeaderMenu;
- 
