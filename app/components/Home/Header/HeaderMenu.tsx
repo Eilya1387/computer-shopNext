@@ -10,13 +10,13 @@ interface HeaderMenuProps {
 
 const HeaderMenu: React.FC<HeaderMenuProps> = ({ onOpenSidebar }) => {
   const [isNavDropdownOpen, setIsNavDropdownOpen] = useState(false);
-const [scrolled, setscrolled] = useState(false);
-useEffect(() => {
-  const handlescroll = (): void => {
-    setscrolled(window.scrollY > 1);
-  };
-  window.addEventListener("scroll", handlescroll);
-}, []);
+  const [scrolled, setscrolled] = useState(false);
+  useEffect(() => {
+    const handlescroll = (): void => {
+      setscrolled(window.scrollY > 1);
+    };
+    window.addEventListener("scroll", handlescroll);
+  }, []);
   return (
     <menu
       className={`header-menu w-full h-[42px] md:h-[75px] bg-white z-50 ${
@@ -56,7 +56,7 @@ useEffect(() => {
           </i>
         </div>
 
-        <div className="header-menu__wrap__right w-[128px] h-10 flex">
+        <div className="header-menu__wrap__right w-32 h-10 flex">
           <button className="header-menu__wrap__right--1 w-full h-full flex justify-center items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -159,15 +159,15 @@ useEffect(() => {
           />
         </div>
 
-        <nav className="header-menu__navbar--lg flex justify-evenly items-center gap-5">
-          <Link href="/">صفحه اصلی</Link>
+        <nav className="header-menu__navbar--lg flex justify-evenly items-center gap-5 ">
+          <Link href="/" className="hover:text-[#f25c54]">صفحه اصلی</Link>
 
           <div className="navbar__item--dropdown relative">
             <button
               className="navbar-dropdown__btn flex flex-row-reverse gap-1.5 items-center"
               onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
             >
-              <p>دسته بندی ها</p>
+              <p className="hover:text-[#f25c54]">دسته بندی ها</p>
               <Image
                 src="/Header/arrow-down.webp"
                 alt="arrow"
@@ -205,14 +205,14 @@ useEffect(() => {
           </div>
 
           <div className="navbar__item cursor-pointer hover:text-blue-600 transition">
-            تخفیف دار ها
+            <Link href="/products" className="hover:text-[#f25c54]">محصولات</Link>
           </div>
           <div className="navbar__item cursor-pointer hover:text-blue-600 transition">
-            <Link href="/contact">ارتباط با ما</Link>
+            <Link href="/contact" className="hover:text-[#f25c54]">ارتباط با ما</Link>
           </div>
         </nav>
 
-        <div className="header-menu__icons__left--lg w-[128px] h-10 flex">
+        <div className="header-menu__icons__left--lg w-32 h-10 flex">
           <button className="header-menu__wrap__left--1 w-full h-full flex justify-center items-center">
             <Image
               src="/Header/MagnifyingGlass.webp"
@@ -229,10 +229,18 @@ useEffect(() => {
               height={24}
             />
           </button>
-          <Link href="/auth/login" className="cursor-pointer header-menu__wrap__left--3 w-full h-full flex justify-center items-center">
-          <button>
-            <Image src="/Header/User.webp" alt="user" width={24} height={24} />
-          </button>
+          <Link
+            href="/auth/login"
+            className="cursor-pointer header-menu__wrap__left--3 w-full h-full flex justify-center items-center"
+          >
+            <button>
+              <Image
+                src="/Header/User.webp"
+                alt="user"
+                width={24}
+                height={24}
+              />
+            </button>
           </Link>
         </div>
       </div>

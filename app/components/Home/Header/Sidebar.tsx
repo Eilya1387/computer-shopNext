@@ -24,7 +24,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
       {/* Sidebar */}
       <section
-        className={`sidebar w-[85%] sm:w-[400px] h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 flex flex-col justify-between items-center pb-8 fixed top-0 z-70 lg:hidden transition-all duration-500 ease-out shadow-2xl ${
+        className={`sidebar w-[85%] sm:w-[400px] h-screen bg-linear-to-br from-slate-50 via-white to-blue-50 flex flex-col justify-between items-center pb-8 fixed top-0 z-70 lg:hidden transition-all duration-500 ease-out shadow-2xl ${
           isOpen ? "translate-x-0" : "translate-x-[120%]"
         }`}
         style={{ right: 0 }}
@@ -32,12 +32,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         {/* Header with Close Button */}
         <div className="w-full relative">
           {/* Decorative Top Bar */}
-          <div className="h-2 bg-gradient-to-r from-[#476f90] via-[#f25c54] to-[#476f90]" />
+          <div className="h-2 bg-linear-to-r from-[#476f90] via-[#f25c54] to-[#476f90]" />
           
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-6 left-6 w-10 h-10 rounded-full bg-gradient-to-br from-[#f25c54] to-[#ff7a70] flex items-center justify-center shadow-lg transform transition-all duration-300 hover:scale-110 hover:rotate-90 active:scale-95 z-10"
+            className="absolute top-6 left-6 w-10 h-10 rounded-full bg-linear-to-br from-[#f25c54] to-[#ff7a70] flex items-center justify-center shadow-lg transform transition-all duration-300 hover:scale-110 hover:rotate-90 active:scale-95 z-10"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <li>
               <Link
                 href="/"
-                className="group flex items-center justify-between w-full p-4 rounded-xl bg-white hover:bg-gradient-to-r hover:from-[#476f90] hover:to-[#3d5a73] text-gray-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg transform hover:translate-x-[-4px]"
+                className="group flex items-center justify-between w-full p-4 rounded-xl bg-white hover:bg-linear-to-r hover:from-[#476f90] hover:to-[#3d5a73] text-gray-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg transform hover:translate-x-[-4px]"
               >
                 <span className="font-medium">صفحه اصلی</span>
                 <div className="w-10 h-10 rounded-lg bg-blue-50 group-hover:bg-white/20 flex items-center justify-center transition-all duration-300">
@@ -90,7 +90,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <div className="space-y-2">
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="group flex items-center justify-between w-full p-4 rounded-xl bg-white hover:bg-gradient-to-r hover:from-[#f25c54] hover:to-[#ff7a70] text-gray-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg transform hover:translate-x-[-4px]"
+                  className="group flex items-center justify-between w-full p-4 rounded-xl bg-white hover:bg-linear-to-r hover:from-[#f25c54] hover:to-[#ff7a70] text-gray-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg transform hover:translate-x-[-4px]"
                 >
                   <span className="font-medium">دسته بندی ها</span>
                   <div className="w-10 h-10 rounded-lg bg-orange-50 group-hover:bg-white/20 flex items-center justify-center transition-all duration-300">
@@ -138,10 +138,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             {/* Discounts */}
             <li>
               <Link
-                href="/discounts"
-                className="group flex items-center justify-between w-full p-4 rounded-xl bg-white hover:bg-gradient-to-r hover:from-[#f25c54] hover:to-[#ff7a70] text-gray-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg transform hover:translate-x-[-4px]"
+                href="/products"
+                className="group flex items-center justify-between w-full p-4 rounded-xl bg-white hover:bg-linear-to-r hover:from-[#f25c54] hover:to-[#ff7a70] text-gray-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg transform hover:translate-x-[-4px]"
               >
-                <span className="font-medium">تخفیف دار ها</span>
+                <span className="font-medium">محصولات</span>
                 <div className="w-10 h-10 rounded-lg bg-orange-50 group-hover:bg-white/20 flex items-center justify-center transition-all duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +164,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <li>
               <Link
                 href="/contact"
-                className="group flex items-center justify-between w-full p-4 rounded-xl bg-white hover:bg-gradient-to-r hover:from-[#476f90] hover:to-[#3d5a73] text-gray-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg transform hover:translate-x-[-4px]"
+                className="group flex items-center justify-between w-full p-4 rounded-xl bg-white hover:bg-linear-to-r hover:from-[#476f90] hover:to-[#3d5a73] text-gray-700 hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg transform hover:translate-x-[-4px]"
               >
                 <span className="font-medium">ارتباط با ما</span>
                 <div className="w-10 h-10 rounded-lg bg-blue-50 group-hover:bg-white/20 flex items-center justify-center transition-all duration-300">
@@ -191,7 +191,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <div className="flex gap-3 mb-4">
             <Link
               href="/auth/login"
-              className="flex-1 bg-gradient-to-r from-[#476f90] to-[#3d5a73] text-white py-3 rounded-xl font-medium text-center shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
+              className="flex-1 bg-linear-to-r from-[#476f90] to-[#3d5a73] text-white py-3 rounded-xl font-medium text-center shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
             >
               ورود
             </Link>
